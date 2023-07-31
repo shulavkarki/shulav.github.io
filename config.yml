@@ -1,0 +1,65 @@
+baseURL: 
+languageCode: en-us
+title: " "
+theme: "PaperMod"
+cover:
+  hidden: false # hide everywhere but not in structured data
+  hiddenInList: false # hide on list pages and home
+  hiddenInSingle: false # hide on single page
+
+
+params:
+  homeInfoParams:
+    Title: "Hi I'm Shulav Karki"
+    Content: Here i'll be posting how to unravel patterns.
+  
+  socialIcons:
+    - name: github
+      url: "https://github.com/shulavkarki"
+    - name: linkedin
+      url: "https://www.linkedin.com/in/shulav-karki-a5b144154/"
+
+  ShowBreadCrumbs: true
+
+  ShowReadingTime: true
+
+  ShowShareButtons: true
+
+  ShowPostNavLinks: true
+
+
+  profileMode:
+    enabled: true # needs to be explicitly set
+    title: "Aiello! \U0001F44B"
+    subtitle: "I'm Shulav Karki. You can connect with me at the following social platforms:"
+    # imageUrl: "img/profile.jpg"
+    imageWidth: 300
+    imageHeight: 300
+    imageTitle: "Profile Pic"
+    buttons:
+      - name: Blogs
+        url: blogs
+      - name: Projects
+        url: projects
+  
+  label:
+    text: ""
+    icon: "img/icon.png"
+    iconHeight: 30
+
+
+
+menu:
+  main:
+    - identifier: about
+      name: About Me
+      url: /about/
+      weight: 4
+    - identifier: blog
+      name: Blogs
+      url: /blogs/
+      weight: 1
+
+
+
+
