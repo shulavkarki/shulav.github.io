@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Blogs on  </title>
-    <link>/blogs/</link>
-    <description>Recent content in Blogs on  </description>
+    <title>Blogs on Shulav</title>
+    <link>http://shulav.github.io/blogs/</link>
+    <description>Recent content in Blogs on Shulav</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 29 Jul 2023 14:35:23 +0545</lastBuildDate><atom:link href="/blogs/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 29 Jul 2023 14:35:23 +0545</lastBuildDate><atom:link href="http://shulav.github.io/blogs/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Ml</title>
-      <link>/blogs/ml/</link>
+      <link>http://shulav.github.io/blogs/ml/</link>
       <pubDate>Sat, 29 Jul 2023 14:35:23 +0545</pubDate>
       
-      <guid>/blogs/ml/</guid>
+      <guid>http://shulav.github.io/blogs/ml/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Ai</title>
-      <link>/blogs/ai/</link>
+      <link>http://shulav.github.io/blogs/ai/</link>
       <pubDate>Sat, 29 Jul 2023 14:34:17 +0545</pubDate>
       
-      <guid>/blogs/ai/</guid>
+      <guid>http://shulav.github.io/blogs/ai/</guid>
       <description>Artificial Intelligence: The Future is Now Introduction Artificial Intelligence (AI) is a revolutionary technology that aims to create intelligent machines capable of performing tasks that typically require human intelligence. It encompasses various subfields like machine learning, natural language processing, computer vision, and more. As AI continues to advance rapidly, its impact on industries and society as a whole is becoming increasingly profound.
 The Evolution of AI In the past, AI was merely a concept found in science fiction novels and movies.</description>
     </item>
