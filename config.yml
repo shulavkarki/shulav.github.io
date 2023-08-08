@@ -1,6 +1,6 @@
-baseURL: 
+baseURL: "http://shulav.github.io/"
 languageCode: en-us
-title: " "
+title: "Shulav"
 theme: "PaperMod"
 cover:
   hidden: false # hide everywhere but not in structured data
