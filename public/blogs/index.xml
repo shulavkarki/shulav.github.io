@@ -1,27 +1,29 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Blogs on Shulav</title>
-    <link>http://shulav.github.io/blogs/</link>
-    <description>Recent content in Blogs on Shulav</description>
+    <title>Blogs on Unraveling Patterns</title>
+    <link>/blogs/</link>
+    <description>Recent content in Blogs on Unraveling Patterns</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 29 Jul 2023 14:35:23 +0545</lastBuildDate><atom:link href="http://shulav.github.io/blogs/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 29 Jul 2023 14:35:23 +0545</lastBuildDate><atom:link href="/blogs/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Ml</title>
-      <link>http://shulav.github.io/blogs/ml/</link>
+      <title>Evaluation Metircs of Recommendation System</title>
+      <link>/blogs/recsys_metrics/</link>
       <pubDate>Sat, 29 Jul 2023 14:35:23 +0545</pubDate>
       
-      <guid>http://shulav.github.io/blogs/ml/</guid>
-      <description></description>
+      <guid>/blogs/recsys_metrics/</guid>
+      <description>Evaluation Metrics of Recommendation System Recommendation System Recommendation System or RecSys is a platform or a way where someone get a relevant item or products based on their past interactions(liked, bought, wishlist, etc)
+Way to measure Success of RecSys  Offline Metrics Online Metrics  Ofline Metrics In this, we evaluate on the past data(doesn&amp;rsquo;t require real time interactions.)
+ Visual Inspection Completeness on k (recall@k) Accuracy on k(precision@k) Rank Aware Metrics</description>
     </item>
     
     <item>
-      <title>Ai</title>
-      <link>http://shulav.github.io/blogs/ai/</link>
+      <title>Artificial Intelligence</title>
+      <link>/blogs/ai/</link>
       <pubDate>Sat, 29 Jul 2023 14:34:17 +0545</pubDate>
       
-      <guid>http://shulav.github.io/blogs/ai/</guid>
+      <guid>/blogs/ai/</guid>
       <description>Artificial Intelligence: The Future is Now Introduction Artificial Intelligence (AI) is a revolutionary technology that aims to create intelligent machines capable of performing tasks that typically require human intelligence. It encompasses various subfields like machine learning, natural language processing, computer vision, and more. As AI continues to advance rapidly, its impact on industries and society as a whole is becoming increasingly profound.
 The Evolution of AI In the past, AI was merely a concept found in science fiction novels and movies.</description>
     </item>

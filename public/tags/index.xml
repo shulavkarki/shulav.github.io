@@ -1,27 +1,45 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on Shulav</title>
-    <link>http://shulav.github.io/tags/</link>
-    <description>Recent content in Tags on Shulav</description>
+    <title>Tags on Unraveling Patterns</title>
+    <link>/tags/</link>
+    <description>Recent content in Tags on Unraveling Patterns</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 29 Jul 2023 14:35:23 +0545</lastBuildDate><atom:link href="http://shulav.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 29 Jul 2023 14:35:23 +0545</lastBuildDate><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>ai</title>
-      <link>http://shulav.github.io/tags/ai/</link>
+      <title>metrics</title>
+      <link>/tags/metrics/</link>
       <pubDate>Sat, 29 Jul 2023 14:35:23 +0545</pubDate>
       
-      <guid>http://shulav.github.io/tags/ai/</guid>
+      <guid>/tags/metrics/</guid>
       <description></description>
     </item>
     
     <item>
       <title>ml</title>
-      <link>http://shulav.github.io/tags/ml/</link>
+      <link>/tags/ml/</link>
       <pubDate>Sat, 29 Jul 2023 14:35:23 +0545</pubDate>
       
-      <guid>http://shulav.github.io/tags/ml/</guid>
+      <guid>/tags/ml/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>RecSys</title>
+      <link>/tags/recsys/</link>
+      <pubDate>Sat, 29 Jul 2023 14:35:23 +0545</pubDate>
+      
+      <guid>/tags/recsys/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ai</title>
+      <link>/tags/ai/</link>
+      <pubDate>Sat, 29 Jul 2023 14:34:17 +0545</pubDate>
+      
+      <guid>/tags/ai/</guid>
       <description></description>
     </item>
     

@@ -2,34 +2,46 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://shulav.github.io/tags/ai/</loc>
+    <loc>/blogs/</loc>
     <lastmod>2023-07-29T14:35:23+05:45</lastmod>
   </url><url>
-    <loc>http://shulav.github.io/blogs/</loc>
+    <loc>/categories/</loc>
     <lastmod>2023-07-29T14:35:23+05:45</lastmod>
   </url><url>
-    <loc>http://shulav.github.io/categories/</loc>
+    <loc>/blogs/recsys_metrics/</loc>
     <lastmod>2023-07-29T14:35:23+05:45</lastmod>
   </url><url>
-    <loc>http://shulav.github.io/blogs/ml/</loc>
+    <loc>/tags/metrics/</loc>
     <lastmod>2023-07-29T14:35:23+05:45</lastmod>
   </url><url>
-    <loc>http://shulav.github.io/tags/ml/</loc>
+    <loc>/tags/ml/</loc>
     <lastmod>2023-07-29T14:35:23+05:45</lastmod>
   </url><url>
-    <loc>http://shulav.github.io/</loc>
+    <loc>/categories/ranking/</loc>
     <lastmod>2023-07-29T14:35:23+05:45</lastmod>
   </url><url>
-    <loc>http://shulav.github.io/tags/</loc>
+    <loc>/categories/recommendation/</loc>
     <lastmod>2023-07-29T14:35:23+05:45</lastmod>
   </url><url>
-    <loc>http://shulav.github.io/categories/tech/</loc>
+    <loc>/tags/recsys/</loc>
     <lastmod>2023-07-29T14:35:23+05:45</lastmod>
   </url><url>
-    <loc>http://shulav.github.io/blogs/ai/</loc>
+    <loc>/tags/</loc>
+    <lastmod>2023-07-29T14:35:23+05:45</lastmod>
+  </url><url>
+    <loc>/</loc>
+    <lastmod>2023-07-29T14:35:23+05:45</lastmod>
+  </url><url>
+    <loc>/tags/ai/</loc>
     <lastmod>2023-07-29T14:34:17+05:45</lastmod>
   </url><url>
-    <loc>http://shulav.github.io/about/</loc>
+    <loc>/blogs/ai/</loc>
+    <lastmod>2023-07-29T14:34:17+05:45</lastmod>
+  </url><url>
+    <loc>/categories/tech/</loc>
+    <lastmod>2023-07-29T14:34:17+05:45</lastmod>
+  </url><url>
+    <loc>/about/</loc>
     <lastmod>2022-04-09T23:15:00+07:00</lastmod>
   </url>
 </urlset>

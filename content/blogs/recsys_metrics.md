@@ -3,7 +3,7 @@ title: "Evaluation Metircs of Recommendation System"
 date: 2023-07-29T14:35:23+05:45
 draft: false
 cover:
-  image:'img/rec.png'
+  image: 'img/rec.png'
   alt: "Evaluation Metrics of RecSys/Rank"
   caption: "Read More...."
 tags: ["RecSys", "metrics", "ml"]

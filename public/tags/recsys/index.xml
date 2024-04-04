@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>RecSys on Unraveling Patterns</title>
+    <link>/tags/recsys/</link>
+    <description>Recent content in RecSys on Unraveling Patterns</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 29 Jul 2023 14:35:23 +0545</lastBuildDate><atom:link href="/tags/recsys/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Evaluation Metircs of Recommendation System</title>
+      <link>/blogs/recsys_metrics/</link>
+      <pubDate>Sat, 29 Jul 2023 14:35:23 +0545</pubDate>
+      
+      <guid>/blogs/recsys_metrics/</guid>
+      <description>Evaluation Metrics of Recommendation System Recommendation System Recommendation System or RecSys is a platform or a way where someone get a relevant item or products based on their past interactions(liked, bought, wishlist, etc)
+Way to measure Success of RecSys  Offline Metrics Online Metrics  Ofline Metrics In this, we evaluate on the past data(doesn&amp;rsquo;t require real time interactions.)
+ Visual Inspection Completeness on k (recall@k) Accuracy on k(precision@k) Rank Aware Metrics</description>
+    </item>
+    
+  </channel>
+</rss>
