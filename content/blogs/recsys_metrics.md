@@ -3,7 +3,7 @@ title: "Evaluation Metircs of Recommendation System"
 date: 2023-07-29T14:35:23+05:45
 draft: false
 cover:
-  # image:' /ai.jpg'
+  image:'img/rec.png'
   alt: "Evaluation Metrics of RecSys/Rank"
   caption: "Read More...."
 tags: ["RecSys", "metrics", "ml"]
@@ -16,7 +16,7 @@ categories: ["recommendation", "ranking"]
 
 Recommendation System or RecSys is a platform or a way where someone get a relevant item or products based on their past interactions(liked, bought, wishlist, etc)
 
-### Measure Success of RecSys
+### Way to measure Success of RecSys
 
 1. Offline Metrics
 2. Online Metrics
@@ -45,14 +45,14 @@ Visual inspection is more than just glancing at recommendation outputs; it's abo
 
 Measures the ratio of the number of relevant items in the first k ranked items to the total number of relevant elements.
 
-![Recall@k](../../static/img/recsys_metrics/recall.png)
+![Recall@k](https://github.com/shulavkarki/shulavkarki.github.io/blob/fe7f8526760ebb8cdd8225f67c4688c4bc4a3df8/static/img/recsys_metrics/recall.png)
 
 ### Example
 
 Consider the number of relevants for a particular for user/query = 8  
 recall@10 = number of relevant items present in the top 10 / total number of relevant items
 
-![Recall@k](../../static/img/recsys_metrics/recall2.png)
+![Recall@k](https://github.com/shulavkarki/shulavkarki.github.io/blob/fe7f8526760ebb8cdd8225f67c4688c4bc4a3df8/static/img/recsys_metrics/recall2.png)
 
 Recall@10 = 5/8 = 0.625  
 Recall@8 = 5/8 = 0.625  
@@ -68,13 +68,13 @@ Recall@5 = 3/8 = 0.375
 
 Measures out of k ranked items, how many of them are actually relevant.
 
-![Precision@k](../../static/img/recsys_metrics/precision.png)
+![Precision@k](https://github.com/shulavkarki/shulavkarki.github.io/blob/fe7f8526760ebb8cdd8225f67c4688c4bc4a3df8/static/img/recsys_metrics/precision.png)
 
 ### Example
 
 precision@10 = number of relevant items in top 10 / number of items in top 10
 
-![Precision@k](../../static/img/recsys_metrics/precision2.png)
+![Precision@k](https://github.com/shulavkarki/shulavkarki.github.io/blob/fe7f8526760ebb8cdd8225f67c4688c4bc4a3df8/static/img/recsys_metrics/precision2.png)
 
 precision@10 = 5/10 = 0.5  
 precision@5 = 3/5 = 0.6
@@ -84,7 +84,7 @@ precision@5 = 3/5 = 0.6
 - No rank awareness.  
   Example:
 
-![precision@k](../../static/img/recsys_metrics/precision3.png)
+![precision@k](https://github.com/shulavkarki/shulavkarki.github.io/blob/fe7f8526760ebb8cdd8225f67c4688c4bc4a3df8/static/img/recsys_metrics/precision3.png)
 
 In both cases, precision@10 will be 50%, though for model B the relevant items are at the very bottom of the list.
 
@@ -99,7 +99,7 @@ Consider the position of items while evaluating
 ## i. Mean Reciprocal Rank(MRR)
 
 Takes the rank of the first relevant elements in the ranked list  
-![mrr@k](../../static/img/recsys_metrics/mrr.png)
+![mrr@k](https://github.com/shulavkarki/shulavkarki.github.io/blob/fe7f8526760ebb8cdd8225f67c4688c4bc4a3df8/static/img/recsys_metrics/mrr.png)
 
 where,
 
@@ -109,7 +109,7 @@ rank i =rank of the first relevant element in the ith ranked list
 
 #### Example
 
-![mrr@k](../../static/img/recsys_metrics/mrr2.png)
+![mrr@k](https://github.com/shulavkarki/shulavkarki.github.io/blob/fe7f8526760ebb8cdd8225f67c4688c4bc4a3df8/static/img/recsys_metrics/mrr2.png)
 
 Here is how we compute the Reciprocal Rank (RR) for each user/query:
 
@@ -141,7 +141,7 @@ MRR can take values from 0 to 1.
 Measures the average precision at all relevant ranks within the list of top k recommendations.
 
 
-![mrr@k](../../static/img/recsys_metrics/map.png)
+![mrr@k](https://github.com/shulavkarki/shulavkarki.github.io/blob/fe7f8526760ebb8cdd8225f67c4688c4bc4a3df8/static/img/recsys_metrics/map.png)
 
 ### Example
 Lets say below is the top 6 relevant items for a particular user.  
@@ -150,13 +150,13 @@ Gray color: Not relevant
 Pink: Relevant 
 
 
-![mrr@k](../../static/img/recsys_metrics/map2.png)
+![mrr@k](https://github.com/shulavkarki/shulavkarki.github.io/blob/fe7f8526760ebb8cdd8225f67c4688c4bc4a3df8/static/img/recsys_metrics/map2.png)
 
 - First we calculate precision at each rank of the top k true relevant items
 - Then, take average of these precision.
 - The, compute 1 and 2 for all the users/query, and take average which results to mAP@k for all users/query.
 
-![mrr@k](../../static/img/recsys_metrics/map3.png)
+![mrr@k](https://github.com/shulavkarki/shulavkarki.github.io/blob/fe7f8526760ebb8cdd8225f67c4688c4bc4a3df8/static/img/recsys_metrics/map3.png)
 
 ### Interpretation
 
@@ -169,23 +169,23 @@ Metric that compares the rankings to an ideal ranking(where all relevant items a
 
 We assume that there is some ideal ranking with all the items sorted in decreasing order of relevance. For example, for a user/query, below is the ideal ranking for them.
 
-![ndcg@k](../../static/img/recsys_metrics/ideal.png)
+![ndcg@k](https://github.com/shulavkarki/shulavkarki.github.io/blob/fe7f8526760ebb8cdd8225f67c4688c4bc4a3df8/static/img/recsys_metrics/ideal.png)
 
 ### Formula  
-![ndcg@k](../../static/img/recsys_metrics/ndcg.png)
+![ndcg@k](https://github.com/shulavkarki/shulavkarki.github.io/blob/fe7f8526760ebb8cdd8225f67c4688c4bc4a3df8/static/img/recsys_metrics/ndcg.png)
 
 Before moving DCG, let's understand what cumulative gain really is?
 
 
 ###  Cumulative Gain
 
-![ndcg@k](../../static/img/recsys_metrics/cg.png)
+![ndcg@k](https://github.com/shulavkarki/shulavkarki.github.io/blob/fe7f8526760ebb8cdd8225f67c4688c4bc4a3df8/static/img/recsys_metrics/cg.png)
 
 
 #### Example
 
 Let's consider we have 5 recommendations for two different cases, 
-![ndcg@k](../../static/img/recsys_metrics/cg2.png)
+![ndcg@k](https://github.com/shulavkarki/shulavkarki.github.io/blob/fe7f8526760ebb8cdd8225f67c4688c4bc4a3df8/static/img/recsys_metrics/cg2.png)
 
 In above case, both list has same cumulative gain. 
 But for list A, the relevant items are at the bottom of the ranked list but still both are considered to be a good recommendation from cumulative gain perspective. If we can penalize, the relevant results at the lower rank, then it would be a fair approach. 
@@ -193,7 +193,7 @@ But for list A, the relevant items are at the bottom of the ranked list but stil
 ### Discounted Cumulative Gain(DCG)
 It introduces logarithmic discount that helps to assigns less weight to releant items that appear lower. This way, instead of simply summing up the item’s relevance, we adjust the contribution of each item based on its position. 
 
-![ndcg@k](../../static/img/recsys_metrics/dcg.png)
+![ndcg@k](https://github.com/shulavkarki/shulavkarki.github.io/blob/fe7f8526760ebb8cdd8225f67c4688c4bc4a3df8/static/img/recsys_metrics/dcg.png)
 Where rel (i) is the relevance score of the item at position i.
 
 #### Example
@@ -201,18 +201,18 @@ if for the particular user/query, recommendation list is [1, 0, 1,  0, 1].
 1= relevant  
 0 = non-relevant 
 
-![ndcg@k](../../static/img/recsys_metrics/dcg3.png)
+![ndcg@k](https://github.com/shulavkarki/shulavkarki.github.io/blob/fe7f8526760ebb8cdd8225f67c4688c4bc4a3df8/static/img/recsys_metrics/dcg3.png)
 
 If the ranked LIst was [1, 1, 0, 0, 1] calculate DCG@3?
 
-![ndcg@k](../../static/img/recsys_metrics/dcg4.png)
+![ndcg@k](https://github.com/shulavkarki/shulavkarki.github.io/blob/fe7f8526760ebb8cdd8225f67c4688c4bc4a3df8/static/img/recsys_metrics/dcg4.png)
 
 Since, the relevant item was one rank higer than previous, so the DCG was increased.
 
 
 IDCG Can be calculated as same as DCG
 
-![ndcg@k](../../static/img/recsys_metrics/dcg2.png)
+![ndcg@k](https://github.com/shulavkarki/shulavkarki.github.io/blob/fe7f8526760ebb8cdd8225f67c4688c4bc4a3df8/static/img/recsys_metrics/dcg2.png)
 
 ### Interpretations
 
