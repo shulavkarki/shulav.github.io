@@ -8,8 +8,20 @@ cover:
   hiddenInSingle: false # hide on single page
 
 markup:
-  defaultMarkdownHandler: goldmark
-  
+  goldmark:
+    extensions:
+      passthrough:
+        delimiters:
+          block:
+          - - \[
+            - \]
+          - - $$
+            - $$
+          inline:
+          - - \(
+            - \)
+        enable: true
+        
 params:
   homeInfoParams:
     Title: "Hi I'm Shulav Karki"
@@ -28,6 +40,8 @@ params:
   ShowShareButtons: true
 
   ShowPostNavLinks: true
+
+  math: true
 
 
   profileMode:
