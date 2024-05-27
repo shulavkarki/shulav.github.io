@@ -25,13 +25,13 @@ draft: false
 
 ## Summary
 ---
-Highly motivated and detail-oriented Machine Learning Engineer with 1.5+ years of experience in implementing and deploying machine learning models(Recommendation and Computer vision models) for various applications. Proficient in Python, PyTorch, PySpark, Pandas, Numpy, Scikit-learn and AWS cloud services. Skilled in building pipelines for data preprocessing, feature engineering, model building and model evaluation. Strong communicator and team player with a passion for learning and innovation.
+Highly motivated and detail-oriented Machine Learning Engineer with 2+ years of experience in implementing and deploying machine learning models(Recommendation and Computer vision models) for various applications. Proficient in Python, PyTorch, PySpark, Pandas, Numpy, Scikit-learn and AWS cloud services. Skilled in building pipelines for data preprocessing, feature engineering, model building and model evaluation. Strong communicator and team player with a passion for learning and innovation.
 
-## Education   
+<!-- ## Education   
 ---
 **Bachelor in Computer Engineering**    |  Institute of Engineering, IOE  
 Graduated: *May 2022*  
-  - Relevant Coursework:  *AI, Data Mining, Operating System, Big Data, Database Management System,  SQL, Data Structures and Algorithm, Probability and Statistics*
+  - Relevant Coursework:  *AI, Data Mining, Operating System, Big Data, Database Management System,  SQL, Data Structures and Algorithm, Probability and Statistics* -->
 
 ## Skills
 ---
@@ -44,7 +44,7 @@ Graduated: *May 2022*
 - Deep Learning Models: CNN, RNN, LSTM, Transformer, BERT
 - Recommendation Models: Candidate Generation, lambdaMART, ranking models, contextual models like DeepFM, DSIN, DIEN and sequential models like NextItNet, SRGNN., etc
 - NLP Tools: SpaCy, NLTK, Gensim
-
+<!-- 
 ## Work Experience
 ---
 **Machine Learning Engineer | Fusemachines**
@@ -86,7 +86,7 @@ Graduated: *May 2022*
 ---
 - Machine Learning by Stanford University
 - Machine Learning and Deep Learning Fellowship 
-- Machine and Deep Learning Fundamentals by IBM
+- Machine and Deep Learning Fundamentals by IBM -->
 
 <!-- ## Volunteer Work
 ---
@@ -94,11 +94,11 @@ Graduated: *May 2022*
 *January 20XX - Present*
 - Contributed to building a website for a nonprofit organization focused on providing tech education to underserved communities. -->
 
-## Languages
+<!-- ## Languages
 ---
 - English (Fluent)
 - Nepali (Fluent)
-- Hindi (Conversational)
+- Hindi (Conversational) -->
 
 <!-- In my previous role, I was an Associate Professor of Bioinformatics carrying out research in computational drug discovery:
 - [**Google Scholar**](https://scholar.google.com/citations?user=df-l7zQAAAAJ&hl=en)
