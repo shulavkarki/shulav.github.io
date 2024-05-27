@@ -26,16 +26,16 @@ Model optimization is transforming machine/deep learning model such that it has:
 
 We're going to cover different topics, so buckle up
 
-1. Quantization
+1. Quantization  
 Reducing number of bits used for model parameters
 
-2. Network Pruning
+2. Network Pruning  
 Reducing the number of distinct weight values
 
-3. Low-Rank Matrix Factorization
+3. Low-Rank Matrix Factorization  
 Factorizing model weights such that it reduces overall model parameters
 
-4. Knoweldge Distillation 
+4. Knoweldge Distillation  
 Obtatining a smaller netwokr by mimicking the prediction
 
 
