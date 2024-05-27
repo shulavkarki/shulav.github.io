@@ -61,16 +61,23 @@ Using half precision, the memory requirements and computational cost of the infe
 Blockers:  
 i. As of now, Half-Precision is not [supported](https://stackoverflow.com/questions/62112534/fp16-inference-on-cpu-pytorch) for CPU. Operations for conv_layer, stft, etc doesn't support operations in float-16 on cpu.
 
-#### 2. Post Training Dyanmic Quantization  
+#### 2. [Post Training Dyanmic Quantization](https://pytorch.org/tutorials/recipes/recipes/dynamic_quantization.html)  
 In Dynamic Quantization, the quantization on model weights are quantized ahead of time while quantization on activatios occurs dynamically during runtime.  
 During inference, the activation's are collected for input and are analyzed to determine their dynamic range. Once the dynamic range is known, quantization parameters such as scale and zero-point are calculated to map the floating point activation to lower precision.
 
-```
-import torch
-model = …
-quantized_model = torch.quantization.quantize_dynamic(model, qconfig_spec={torch.nn.Linear}, dtype=torch.qint8)
-
 ```python
+import torch
+model = …  #pytorch model
+quantized_model = torch.quantization.quantize_dynamic(model, qconfig_spec={torch.nn.Linear}, dtype=torch.qint8)
+output = quantized_model(input) #infer on quantized model
+
+```
+
+#### - [Supported Layers](https://pytorch.org/docs/stable/quantization.html#torch.quantization.quantize_dynamic):  
+1. nn.Linear
+2. nn.LSTM / nn.GRU / nn.RNN
+3. nn.Embedding
+
 
 #### 3. Post Trianing Static Quantization  
 Scales and zero points for all the activation tensors are pre-computed using some representative unlabeled data.
