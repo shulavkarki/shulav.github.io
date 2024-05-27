@@ -62,7 +62,7 @@ $$scale = \frac{max_{float} - min_{float}}{max_{int} - min_{int}}$$
 For int8, $min_{int}$ = -127, and $max_{int}$ = 127.
   
 2. Zero point  
-Integer value that corresponds to the floating-point value of zero. 
+Integer value that corresponds to the floating-point value of zero.  
 $$zero_{point} = min_{int} - \frac{min_{float}}{scale}$$
 
 
