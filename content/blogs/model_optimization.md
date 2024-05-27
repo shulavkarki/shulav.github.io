@@ -2,7 +2,8 @@
 title: "Model Optimization"
 date: 2024-01-12T14:34:17+05:45
 draft: false
-
+params:
+    math: true
 cover:
     image: 'img/optimization.png'
     alt: 'Model Optimization'
@@ -59,7 +60,7 @@ Step size between quantized values.
 
 $$scale = \frac{max_{float} - min_{float}}{max_{int} - min_{int}}$$
 
-For int8, $min_{int}$ = -127, and $max_{int}$ = 127.
+For int8, $$min_{int} = -127$$ $$max_{int} = 127$$
   
 2. Zero point  
 Integer value that corresponds to the floating-point value of zero.  
@@ -70,7 +71,6 @@ $$zero_{point} = min_{int} - \frac{min_{float}}{scale}$$
 Once the scale and zero point are determined, each floating-point value 𝑥 can be quantized to an integer value 𝑞 using:
 
 $$q = \text{round} \left( \frac{x}{scale} + zero_{point} \right)$$
-
 
 
 #### De-Quantize the Float Values
