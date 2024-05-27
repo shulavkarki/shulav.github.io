@@ -7,7 +7,9 @@ cover:
   hiddenInList: false # hide on list pages and home
   hiddenInSingle: false # hide on single page
 
-
+markup:
+  defaultMarkdownHandler: goldmark
+  
 params:
   homeInfoParams:
     Title: "Hi I'm Shulav Karki"
