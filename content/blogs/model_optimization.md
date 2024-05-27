@@ -47,6 +47,10 @@ We'll mainly focus on optimizing pytorch model. But the gist we'll be same for T
 ## 1. Quantization  
 Quantization means converting/reducing the model parameters precision to lower bit precision typically 8-bit integers , without retraining the model. 
 
+
+### Remapping from float32 to int8:  
+![Quantization](https://raw.githubusercontent.com/shulavkarki/shulavkarki.github.io/master/static/img/model_optimization/quantization.png)
+
 ### Pytorch Availability  
 
 #### 1. Half Precision  
@@ -54,11 +58,21 @@ Half precision refers to performing computations using 16-bit floating point num
 
 Using half precision, the memory requirements and computational cost of the inference process can be reduced, leading to faster inference time.
 
-#### 2. Post Trianing Static Quantization  
+Blockers:  
+i. As of now, Half-Precision is not [supported](https://stackoverflow.com/questions/62112534/fp16-inference-on-cpu-pytorch) for CPU. Operations for conv_layer, stft, etc doesn't support operations in float-16 on cpu.
+
+#### 2. Post Training Dyanmic Quantization  
+In Dynamic Quantization, the quantization on model weights are quantized ahead of time while quantization on activatios occurs dynamically during runtime.  
+During inference, the activation's are collected for input and are analyzed to determine their dynamic range. Once the dynamic range is known, quantization parameters such as scale and zero-point are calculated to map the floating point activation to lower precision.
+
+```
+import torch
+model = …
+quantized_model = torch.quantization.quantize_dynamic(model, qconfig_spec={torch.nn.Linear}, dtype=torch.qint8)
+
+```python
+
+#### 3. Post Trianing Static Quantization  
 Scales and zero points for all the activation tensors are pre-computed using some representative unlabeled data.
 
 Given a floating point DNN, we would just have to run the DNN using some representative unlabeled data, collect the distribution statistics(scale point and zero point) for all the activation layers.
-
-#### 3. Post Training Dyanmic Quantization  
-In Dynamic Quantization, the model weights are quantized at run time during inference. During inference, the activation's are collected for input and are analyzed to determine their dynamic range. Once the dynamic range is known, quantization parameters such as scale and zero-point are calculated to map the floating point activation to lower precision.
-
