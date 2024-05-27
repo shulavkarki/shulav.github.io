@@ -69,7 +69,7 @@ During inference, the activation's are collected for input and are analyzed to d
 ```python
 import torch
 model = …  #pytorch model
-quantized_model = torch.quantization.quantize_dynamic(model, qconfig_spec={torch.nn.Linear}, dtype=torch.qint8)
+quantized_model = torch.ao.quantization.quantize_dynamic(model, qconfig_spec={torch.nn.Linear}, dtype=torch.qint8)
 output = quantized_model(input) #infer on quantized model
 
 ```
@@ -100,14 +100,15 @@ class OriginalModel(torch.nn.Module):
     def __init__(self):
         super(M, self).__init__()
         # QuantStub converts the incoming floating point tensors into a quantized tensor
-        self.quant = torch.quantization.QuantStub()
+        self.quant = torch.ao.quantization.QuantStub()
         self.linear = torch.nn.Linear(10, 20)
-        # DeQuantStub converts the given quantized tensor into a tensor in floating point
-        self.dequant = torch.quantization.DeQuantStub()
+        # DeQuantStub converts the quantized tensor into a floating point tensors
+        self.dequant = torch.ao.quantization.DeQuantStub()
+    
     def forward(self, x):
-    # using QuantStub and DeQuantStub operations, we can indicate the region for quantization point to quantized in the quantized model
+    # using QuantStub and DeQuantStub ops, we indicate the region for quantization in a model
         x = self.quant(x)
-        x = self.linear(x) #
+        x = self.linear(x) # original model
         x = self.dequant(x)
         return x
 
@@ -122,17 +123,18 @@ model_fp32 = OriginalModel()
 
 # Prepare the model for static quantization
 model_fp32.eval()
-model_fp32.qconfig = torch.quantization.get_default_qconfig('fbgemm')
-model_fp32_prepared = torch.quantization.prepare(model_fp32)
+model_fp32.qconfig = torch.ao.quantization.get_default_qconfig('fbgemm')
+model_fp32_prepared = torch.ao.quantization.prepare(model_fp32)
+
 # Determine the best quantization settings by calibrating the model on a representative dataset.
 calibration_dataset = torch.utils.data.Dataset...
 model_fp32_prepared.eval()
 for data, label in calibration_dataset:
     model_fp32_prepared(data)
 ```
-if the target environment is mobile device, we must pass in 'qnnpack' to the get_default_qconfig function.
+if the target environment is mobile device, we must pass in 'qnnpack' to the get_default_qconfig function and for server inference, 'fbgemm' or 'x86'.
 
 3. Convert calibrated model to a quantized model
 ```python
-model_int8 = torch.quantization.convert(model_fp32_prepared)
+model_int8 = torch.ao.quantization.convert(model_fp32_prepared)
 ```
