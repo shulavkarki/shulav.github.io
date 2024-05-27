@@ -6,7 +6,7 @@ draft: false
 cover:
     image: 'img/optimization.png'
     alt: 'Model Optimization'
-    caption: 'Read More....'
+    caption: 'Model Optimization on Deep Learning Models'
     relative: false
     hidden: false
 tags: ["ai", "ml"]
@@ -16,7 +16,7 @@ categories: ["tech", "optimization"]
 
 # Model Optimization
 
-Most deep learning models are made up of millions/billions of parameters. So, when we inference a model, we need to load all its parameter in the memory, this means big models cannot be loaded easily on a edge/embedded devices. So, this blog is focused on optimizing a model through different techniques and analyze its effect on inference time, model size, accuracy.
+Most deep learning models are made up of millions/billions of parameters. So, when we inference a model, we need to load all its parameter in the memory, this means big models cannot be loaded easily on a edge/embedded devices. So, this blog is focused on optimizing a model through different techniques and analyze its effect on inference time, model size, accuracy. 
 
 Model optimization is transforming machine/deep learning model such that it has:
 
@@ -40,3 +40,5 @@ Obtatining a smaller netwokr by mimicking the prediction
 
 
 ![Optimization](https://raw.githubusercontent.com/shulavkarki/shulavkarki.github.io/master/static/img/model_optimization/types_diagram.png)
+
+We'll mainly focus on optimizing pytorch model. But the gist we'll be same for Tensorflow/caffe.,etc
