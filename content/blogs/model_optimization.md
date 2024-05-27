@@ -36,7 +36,7 @@ Reducing the number of distinct weight values
 Factorizing model weights such that it reduces overall model parameters
 
 4. [Knowledge Distillation](#4-knowledge-distillation):  
-Obtatining a smaller netwokr by mimicking the prediction
+Obtatining a smaller network by mimicking the prediction
 
 
 ![Optimization](https://raw.githubusercontent.com/shulavkarki/shulavkarki.github.io/master/static/img/model_optimization/types_diagram.png)
@@ -50,6 +50,36 @@ Quantization means converting/reducing the model parameters precision to lower b
 
 ### Remapping from float32 to int8:  
 ![Quantization](https://raw.githubusercontent.com/shulavkarki/shulavkarki.github.io/master/static/img/model_optimization/quantization.png)
+
+
+### Calculation
+To map the floating-point values to integer values, we need to calculate two key parameters: 
+1. Scale  
+Step size between quantized values.
+
+$$scale = \frac{max_{float} - min_{float}}{max_{int} - min_{int}}$$
+
+For int8, $min_{int}$ = -127, and $max_{int}$ = 127.
+  
+2. Zero point  
+Integer value that corresponds to the floating-point value of zero. 
+$$zero_{point} = min_{int} - \frac{min_{float}}{scale}$$
+
+
+#### Quantize the Float Values
+Once the scale and zero point are determined, each floating-point value 𝑥 can be quantized to an integer value 𝑞 using:
+
+$$q = \text{round} \left( \frac{x}{scale} + zero_{point} \right)$$
+
+
+
+#### De-Quantize the Float Values
+To convert back from quantized values 𝑞 to floating-point values 𝑥, we use:
+
+𝑥 = scale⋅(𝑞 − zero_point)
+
+$$x = scale \cdot (q - zero_{point})$$
+
 
 ## Pytorch Availability  
 
