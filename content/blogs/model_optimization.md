@@ -238,3 +238,12 @@ Usually a large, pre-trained model with superior performance. This model could b
 
 - Student Model:  
 A smaller, more computationally efficient model. It is designed to be deployable in scenarios with limited resources (e.g., mobile devices, embedded systems) while still maintaining good performance.
+
+
+
+
+### References:
+
+- 
+- 
+- 
