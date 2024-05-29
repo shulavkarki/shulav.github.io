@@ -7,13 +7,15 @@ params:
 cover:
     image: 'img/projects/healthcare_bot.jpg'
     alt: 'Chatbot'
-    caption: 'Ask anything regarding diseases'
+    # caption: 'Ask anything regarding diseases'
     relative: false
     hidden: false
 categories:
     - Pytorch
 weight: 1
 ---
+
+
 
 ## Code
 

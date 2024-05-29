@@ -173,6 +173,75 @@ model_int8 = torch.ao.quantization.convert(model_fp32_prepared)
 
 ## 3. Low Rank Matrix Factorization  
 
+Matrix Factorization is decomposing matrices into smaller sub-matrices which serve as approximation of the original matrices while having fewer parameters.  
+
+The Singular Valued Decomposition(SVD) lets us decompose any matrix A with n rows and m columns:
+
+![svd](https://raw.githubusercontent.com/shulavkarki/shulavkarki.github.io/master/static/img/model_optimization/svd.png)
+
+where, r are singular values and if we take first k largest singular values and set other to zero , we’ll get an approximation of A.
+
+Let's see how matrix factorization helps with the model compression or faster inference.  
+
+### Example:  
+![Factorization_layer](https://raw.githubusercontent.com/shulavkarki/shulavkarki.github.io/master/static/img/model_optimization/factorization_layers.png)
+
+For 2nd and 3rd layer, If we consider n=1000, and m=500,
+
+### Without low-rank matrix factorization:
+
+Number of parameters in W = m * n = 500,000 parameters
+
+### With low-rank matrix factorization:
+
+W  is decompose into lower-rank matrices U and V.  
+
+Number of parameters in U = m × k = 500 × 50 = 25,000  parameters. 
+
+Number of parameters in V = k × n = 50 × 1000 = 50,000  parameters. 
+
+Total number of parameters = 25,000 + 50,000 = 75,000 parameters.
+
+        Low rank approximation decreases parameters. from nm to k(n+m).
+
+
+### Problem
+
+We are given a matrix W and want to find  a low rank matrix that produces the lowest approximation error to W. 
+
+- Find rank for each layer, but if we find rank ahead of time to use in each layer. Then we can write weight matrix at each layer as UkVkT  and optimize the network as usual over all Uk   ,   Vk matrices.
+
+
+Now, let's explore how we can apply this low rank decomposition on the fully-connected layers and convolution layers
+
+
+## Post Training Weight/Kernel Decomposition
+
+### 1.  SVD on a Fullly Connected Layer
+
+A fully connected layer essentially does matrix multiplication of its input by a weight matrix, and then adds a bias b:  Wx + b
+
+We can take the SVD of weight matrix, and keep only the first k singular values.
+
+![svd_linear](https://raw.githubusercontent.com/shulavkarki/shulavkarki.github.io/master/static/img/model_optimization/svd_linear.png)
+
+Instead of a single fully connected layer, we implement it as two smaller fully connected layers:
+
+- The first one will have a shape of mxr, with no bias, and its weights will be taken from SVT.
+
+- The second one will have a shape of rxn, with bias equal to b, and its weights will be taken from .
+
+The total number of weights dropped from nxm to r(n+m).
+
+### 2. Tensor Decomposition on Convolution Layers
+The idea is similar to above. We use the weight of convolution layer and apply some decomposition on the weight matrix and the decomposed weight matrix is represented by some smaller size convolution layer which performs depth-wise and point-wise operations.  
+
+There are different algorithm for it:
+1. CP Decomposition
+2. Tucker Decomposition
+
+
+
 ## 4. Knowledge Distillation  
 
 It is a technique where we train a smaller, more efficient student model to mimic the behavior of a larger, more complex teacher model. The central idea is to transfer the ‘knowledge ’ embedded within the cumbersome teacher model to the compact student model. Due to this simpler architecture, KD helps for faster inference and deployment on devices with limited resources.
