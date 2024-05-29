@@ -174,3 +174,67 @@ model_int8 = torch.ao.quantization.convert(model_fp32_prepared)
 ## 3. Low Rank Matrix Factorization  
 
 ## 4. Knowledge Distillation  
+
+It is a technique where we train a smaller, more efficient student model to mimic the behavior of a larger, more complex teacher model. The central idea is to transfer the ‘knowledge ’ embedded within the cumbersome teacher model to the compact student model. Due to this simpler architecture, KD helps for faster inference and deployment on devices with limited resources.
+
+### Components of Knowledge Distillation
+
+#### 1. Knowledge
+The valuable information embedded within a complex, well-trained deep learning model (the teacher) that we aim to transfer to a smaller model (the student). Knowledge can be categorized into:
+
+- Response-Based Knowledge:  
+ Information derived from the final output predictions of the teacher model. This typically involves soft probabilities (in classification tasks) or continuous values (in regression tasks).
+![Response-Based](https://raw.githubusercontent.com/shulavkarki/shulavkarki.github.io/master/static/img/model_optimization/response_kd.png)
+
+
+- Feature-Based Knowledge:  
+Knowledge captured in the intermediate feature representations (outputs of hidden layers) of the teacher network. This encodes higher-level abstractions learned by the teacher.
+
+- Relationship-Based Knowledge:  
+Knowledge about how different data samples interact with each other, or how different parts of the model interact. 
+
+#### 2. Distillation
+The mechanism by which knowledge is transferred from the teacher to the student. This involves:
+
+- Loss Functions:  
+Loss functions tailored to the type of knowledge being transferred. Common choices include:
+
+    - Kullback-Leibler (KL) Divergence for response-based knowledge (often used with probability distributions).
+
+    - Mean Squared Error (MSE) for response-based (continuous outputs) and feature-based knowledge.
+
+    - Perceptual losses and Gram matrix losses for feature-based knowledge.
+
+#### Training Scheme
+![Training_Scheme](https://raw.githubusercontent.com/shulavkarki/shulavkarki.github.io/master/static/img/model_optimization/training_scheme.png)
+
+- Offline Distillation:  
+
+    - Teacher Training:  
+        Utilize a larger, pre-trained model
+
+    - Student Training: 
+
+        - Feed data to both the teacher and the student models.
+
+        - Calculate the distillation loss based on the difference between the teacher’s soft predictions and the student’s predictions.
+
+        - Calculate the objective loss function based on the student’s predicted and the ground truth.
+
+        - Combine the distillation loss and the additional loss, to form the overall training loss.
+
+- Online Distillation:  
+ Knowledge is transferred by employing both Teacher and student training.
+
+- Self-Distillation:  
+The same model serves as both teacher and student (after some initial training).
+
+
+#### 3. Teacher-Student Architecture
+The relationship between the complexity and capacity of the teacher and the student models:
+
+- Teacher Model:  
+Usually a large, pre-trained model with superior performance. This model could be a complex ensemble or a model trained with extensive compute resources.
+
+- Student Model:  
+A smaller, more computationally efficient model. It is designed to be deployable in scenarios with limited resources (e.g., mobile devices, embedded systems) while still maintaining good performance.
