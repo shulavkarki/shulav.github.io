@@ -17,11 +17,15 @@ weight: 1
 
 
 
-## Code
-
 ## Link
+
+
+## Design
+![svd_linear](https://raw.githubusercontent.com/shulavkarki/shulavkarki.github.io/master/static/img/projects/chatbot_design.png)
 
 ## Technologies Used
  - Python
- - 
+ - Selenium
+ - Ollama
+ - Streamlit
 
