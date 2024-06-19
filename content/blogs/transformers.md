@@ -19,6 +19,6 @@ categories: ["tech", "transformer", "attention"]
 
 ### References:
 
-- 
+- [Attention is all you need](https://arxiv.org/abs/1706.03762v7)
 - 
 - 

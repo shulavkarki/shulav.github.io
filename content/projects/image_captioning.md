@@ -1,5 +1,5 @@
 ---
-title: "Healthcare Chatbot"
+title: "Image Captioning"
 date: 2024-01-12T14:34:17+05:45
 draft: false
 params:

@@ -92,7 +92,7 @@ Blockers:
 i. As of now, Half-Precision is not [supported](https://stackoverflow.com/questions/62112534/fp16-inference-on-cpu-pytorch) for CPU. Operations for conv_layer, stft, etc doesn't support operations in float-16 on cpu.
 
 ### 2. [Post Training Dyanmic Quantization](https://pytorch.org/tutorials/recipes/recipes/dynamic_quantization.html)  
-In Dynamic Quantization, the quantization on model weights are quantized ahead of time while quantization on activatios occurs dynamically during runtime.  
+In Dynamic Quantization, the quantization on model weights are quantized ahead of time while quantization on activations occurs dynamically during runtime.  
 During inference, the activation's are collected for input and are analyzed to determine their dynamic range. Once the dynamic range is known, quantization parameters such as scale and zero-point are calculated to map the floating point activation to lower precision.
 
 #### Implementation
