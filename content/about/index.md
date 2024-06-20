@@ -25,25 +25,27 @@ draft: false
 
 ## Summary
 ---
-Highly motivated and detail-oriented Machine Learning Engineer with 2+ years of experience in implementing and deploying machine learning models(Recommendation and Computer vision models) for various applications. Proficient in Python, PyTorch, PySpark, Pandas, Numpy, Scikit-learn and AWS cloud services. Skilled in building pipelines for data preprocessing, feature engineering, model building and model evaluation. Strong communicator and team player with a passion for learning and innovation.
+A highly motivated and detail-oriented Machine Learning Engineer with over 2 years of experience in implementing and deploying machine learning models for diverse applications, including recommendation systems and computer vision. Proficient in technologies such as Python, PyTorch, PySpark, Pandas, Numpy, Scikit-learn, and AWS cloud services. Skilled in building comprehensive pipelines for data preprocessing, feature engineering, model building, model evaluation, and model optimization. Recognized for strong communication skills, teamwork, and a relentless drive for continuous learning and innovation.
 
 <!-- ## Education   
----
+---Highly motivated and detail-oriented Machine Learning Engineer with 2+ years of experience in implementing and deploying machine learning models(Recommendation and Computer vision models) for various applications. Proficient in Python, PyTorch, PySpark, Pandas, Numpy, Scikit-learn and AWS cloud services. Skilled in building pipelines for data preprocessing, feature engineering, model building and model evaluation. Strong communicator and team player with a passion for learning and innovation.
 **Bachelor in Computer Engineering**    |  Institute of Engineering, IOE  
 Graduated: *May 2022*  
   - Relevant Coursework:  *AI, Data Mining, Operating System, Big Data, Database Management System,  SQL, Data Structures and Algorithm, Probability and Statistics* -->
 
 ## Skills
 ---
-- Programming Language: Python, SQL, C, C++ 
-- Libraries: Tensorflow, Keras, Scikit-Learn, Pandas, NumPy, Matplotlib, Searborn
-- Framework: PyTorch, PySpark, Flask, FastAPI
-- Database: MySQL, PostgreSQL 
-- Cloud Deployment: AWS(EC2, Redshift, S3, Athena, EMR, Lambda), GCP
-- Version Control System: Git 
+- Programming Languages: Python, SQL, C, C++
+- Libraries: TensorFlow, Keras, Scikit-learn, Pandas, NumPy, Matplotlib, Seaborn
+- Frameworks: PyTorch, PySpark, Flask, FastAPI
+- Databases: MySQL, PostgreSQL
+- Cloud Deployment: AWS (EC2, Redshift, S3, Athena, EMR, Lambda), GCP
+- Version Control: Git
 - Deep Learning Models: CNN, RNN, LSTM, Transformer, BERT
-- Recommendation Models: Candidate Generation, lambdaMART, ranking models, contextual models like DeepFM, DSIN, DIEN and sequential models like NextItNet, SRGNN., etc
+- Recommendation Models: Candidate Generation, LambdaMART, Ranking models, Contextual models (DeepFM, DSIN, DIEN), Sequential models (NextItNet, SRGNN)
 - NLP Tools: SpaCy, NLTK, Gensim
+- Model Optimization: Quantization, Pruning, Low-Rank Matrix Factorization, Knowledge Distillation
+- Applications: Fraud detection, RecSys, Computer Vision, NLP, Audio, Optimization
 <!-- 
 ## Work Experience
 ---
@@ -94,11 +96,11 @@ Graduated: *May 2022*
 *January 20XX - Present*
 - Contributed to building a website for a nonprofit organization focused on providing tech education to underserved communities. -->
 
-<!-- ## Languages
+## Languages
 ---
 - English (Fluent)
 - Nepali (Fluent)
-- Hindi (Conversational) -->
+- Hindi (Conversational)
 
 <!-- In my previous role, I was an Associate Professor of Bioinformatics carrying out research in computational drug discovery:
 - [**Google Scholar**](https://scholar.google.com/citations?user=df-l7zQAAAAJ&hl=en)
