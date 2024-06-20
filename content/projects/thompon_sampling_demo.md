@@ -5,7 +5,7 @@ draft: false
 params:
     math: true
 cover:
-    image: 'img/projects/thompson_sampling.png'
+    image: 'img/projects/thompson_sampling_cover.png'
     alt: 'Chatbot'
     # caption: 'Ask anything regarding diseases'
     relative: false
