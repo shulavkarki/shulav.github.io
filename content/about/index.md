@@ -22,7 +22,7 @@ draft: false
 - 📞 Phone: (+977) 9815028713
 - 🌐 LinkedIn: [linkedin.com/shulav-karki](https://www.linkedin.com/in/shulav-karki-a5b144154/)
 - 🔗 GitHub: [github.com/shulavkarki](https://github.com/shulavkarki)
-- [📄 Resume](https://raw.githubusercontent.com/shulavkarki/shulavkarki.github.io/master/static/docs/resume.pdf)  
+- 📃 Resume: [📥📥](https://raw.githubusercontent.com/shulavkarki/shulavkarki.github.io/master/static/docs/resume.pdf)  
 
 ## Summary
 ---
