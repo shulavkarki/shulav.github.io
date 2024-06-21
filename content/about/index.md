@@ -19,7 +19,7 @@ draft: false
 
 ## Contact Information
 - 📧 Email: shulavkarki88@gmail.com
-- 📞 Phone: (+977) 9815028713
+- 📞 Phone: [(+977) 9815028713](tel:+9779815028713)
 - 🌐 LinkedIn: [linkedin.com/shulav-karki](https://www.linkedin.com/in/shulav-karki-a5b144154/)
 - 🔗 GitHub: [github.com/shulavkarki](https://github.com/shulavkarki)
 - 📃 Resume: [📥📥](/docs/resume.pdf)  
