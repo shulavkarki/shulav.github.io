@@ -170,6 +170,61 @@ model_int8 = torch.ao.quantization.convert(model_fp32_prepared)
 ```
 
 ## 2. Pruning
+Pruning is a technique of identifying and removing unimportant or redundant parameters, such as weights and neurons, from the network. Removing unimportant parameters from a trained neural network model helps to reduce its size and computational complexity
+Here we'll be doing Post-training pruning which involves pruning the trained model. In general we've two types of pruning.  
+1. Global Unstructured Pruning
+- It involves removing individual model weight parameters based on their magnitude or importance.
+- It prunes the entire network at once, considering the importance of each parameter across the entire model.
+- Even if weights are pruned to zero in global unstructured pruning, the underlying matrix operations is same to that of the  dense original network. So, basically it will have same inference time.  One major limitation of DL framework today is the lack of sparse operation which can be benefited in case like this.
+
+
+2. Local Structured Pruning
+- It involves removing entire structured groups of weights, such as channels or neurons, based on their importance or contribution to the model's performance.
+- It prunes at the level of individual neurons, connections, or weights within a layer of the neural network.
+- This method guarantees that connections to a neuron in a linear layer or channels in a convolutional layer will be zeroed out. This means that if a channel or neuron is completely unimportant, it can be safely removed without affecting the model's performance. So we'll be focusing more on the Local Structured Pruning
+
+
+### Linear Layer
+
+![Linear Pruning](https://raw.githubusercontent.com/shulavkarki/shulavkarki.github.io/master/static/img/model_optimization/linear_pruning.png)
+Fig., (a) Dense Network (b) Pruned Network (dotted lines represent pruned neurons and connections) (c) Network in which the pruned neurons are actually removed from the architecture.
+
+Considering a single Linear Layer 
+```python
+linear_layer = nn.Linear(in_features=10, out_features=100)
+```
+The weight for this linear layer will be:
+
+```python
+torch.Size(100, 10)
+- This means that each of the 100 output neurons has a connection to each of the 10 input neurons, resulting in a weight matrix of 100 rows and 10 columns.
+
+```
+
+
+Now After we apply Local Structured Pruning, it guarantee that some neruons will be zeroed out, so we can physically remove those connections to that particular neurons. Following are the steps:
+1. Identify Redundant Neurons:   Determine which neurons (rows in the weight matrix) are redundant. These neurons will have weights and biases that can be set to zero.
+
+2. Remove connections and replace weights with new Linear Layer:   Physically remove the connections associated with these redundant neurons. This means removing the corresponding rows in the weight matrix and the associated biases. and then create a new smaller linear layer that has reduced weight and biases from above.
+3. Preserve Output Shape:  
+To maintain the original output shape, zero-padding is added back to the output tensor at the positions corresponding to the removed neurons. This ensures that the output shape of the pruned layer matches the original layer.
+
+What if we have subsequent linear layers?
+When dealing with subsequent layers, the input to these layers will also be affected by the pruning of the previous layer. The steps are as follows:
+
+1. Identify Pruned Neurons in Previous Layer:   
+Identify which neurons were pruned in the previous layer.
+
+2. Adjust Weight Matrix of the Next Layer:   
+Modify the weight matrix of the subsequent linear layer to account for the removed input connections. Essentially, this means removing the corresponding columns in the weight matrix of the next layer.
+
+3. Create Reduced Linear Layer:   
+Similar to the previous layer, create a new linear layer with the reduced number of input features.
+
+### Convolution Layer
+![Conv Layer](https://raw.githubusercontent.com/shulavkarki/shulavkarki.github.io/master/static/img/model_optimization/conv_layer.png)
+
+In case of convolution layer as well, the idea is same, we identify the redundant channel and perform convolution without considering those redundant channels and later add zeroed channel on those previous zeroed index channels.
 
 ## 3. Low Rank Matrix Factorization  
 
@@ -313,6 +368,6 @@ A smaller, more computationally efficient model. It is designed to be deployable
 
 ### References:
 
-- 
-- 
+- [Pruning + Information Flow Knowledge Distillation](https://github.com/gsarridis/InDistill)
+- [Comprehensive Guide to Pruning](https://www.datature.io/blog/a-comprehensive-guide-to-neural-network-model-pruning)
 - 
