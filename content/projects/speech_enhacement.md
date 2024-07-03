@@ -25,10 +25,10 @@ A Speech Enhancement Model that employs deep learning techniques to create a mod
    
 ## Training
 
-![train](/imgs/projects/train-audio.png)
+![train](/img/projects/train-audio.png)
 
 ## Inference
-![Infer](/imgs/projects/inference-audio.png)
+![Infer](/img/projects/inference-audio.png)
 
 ## Samples
 
