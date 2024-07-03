@@ -32,14 +32,11 @@ A Speech Enhancement Model that employs deep learning techniques to create a mod
 
 ## Samples
 
-### Noisy Speech
-![Noisy](https://github.com/shulavkarki/shulavkarki.github.io/raw/master/static/audio/noisy_voice.wav)
+[Noisy Speech](https://github.com/shulavkarki/shulavkarki.github.io/raw/master/static/audio/noisy_voice.wav)
 
-### Preicted Speech
-![Predicted](https://github.com/shulavkarki/shulavkarki.github.io/raw/master/static/audio/voice_pred.wav)
+[Predicted Speech](https://github.com/shulavkarki/shulavkarki.github.io/raw/master/static/audio/voice_pred.wav)
 
-### True/Clean Speech
-![Clean](https://github.com/shulavkarki/shulavkarki.github.io/raw/master/static/audio/voice_true.wav)
+[Clean/True Speech](https://github.com/shulavkarki/shulavkarki.github.io/raw/master/static/audio/voice_true.wav)
 
 
 
