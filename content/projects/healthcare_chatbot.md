@@ -25,7 +25,10 @@ A healthcare chatbot that answers queries about diseases, their symptoms, preven
  - Streamlit
  - Pinecone
  - SentenceTransformer
-   
+
+## Code
+[Github](https://github.com/shulavkarki/Speech-Enhancement)
+
 ## Design
 ![chatbot_design](https://raw.githubusercontent.com/shulavkarki/shulavkarki.github.io/master/static/img/projects/chatbot_design.png)
 
